@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Detroiter</title>
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Find a Detroiter</h1>
+
+  <div class="search-container">
+    <div class="search-box">
+      <div class="cntr">
+        <div class="cntr-innr">
+          <div class="search">
+            <input id="search" type="text" placeholder="Search for people..." />
+            <label for="search"></label>
+          </div>
+          <p>Who are you looking for?</p>
+        </div>
+      </div>
+      <div id="search-results"></div>
+    </div>
+    
+    <div class="department-filter">
+      <select id="departmentFilter">
+        <option value="">All Departments</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="peopleList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

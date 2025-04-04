@@ -1,0 +1,271 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-image: url('detroit-skyline.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+/* Add overlay to improve text visibility */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Search container layout */
+.search-container {
+  display: flex;
+  max-width: 800px;
+  margin: 60px auto 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.department-filter {
+  width: 250px;
+}
+
+/* Modern search box styling */
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  pointer-events: none;
+}
+
+.search-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#search-results {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  color: #333;
+}
+
+.result-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.result-item:hover {
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+select#departmentFilter {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+select#departmentFilter:hover {
+  border-color: #fff;
+}
+
+.person-title {
+  color: #ddd;
+  font-size: 0.9em;
+  display: block;
+}
+
+#search-results .person-title {
+  color: #666;
+}
+
+#peopleList {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.person {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.person:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.person a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.person a:hover {
+  text-decoration: underline;
+  color: #4db8ff;
+}
+
+.no-results {
+  padding: 15px;
+  text-align: center;
+  color: #ddd;
+}
+
+
+
+/* About page specific styles */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#details {
+  text-align: left;
+}
+
+p {
+  margin: 15px 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+strong {
+  color: #4db8ff;
+  font-weight: bold;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: white;
+}
+
+/* Create sections for better organization */
+.detail-section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-section:last-child {
+  border-bottom: none;
+}
+
+/* Additional styles for multiple positions */
+.additional-positions {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85em;
+  margin-left: 5px;
+}
+
+.position-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+}
+
+.position-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
